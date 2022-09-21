@@ -29,7 +29,7 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 Route::resource('chirps', ChirpController::class)
-    ->only(['index', 'show'])
+    ->only(['index', 'store'])
     ->middleware('auth', 'verified');
 
 require __DIR__.'/auth.php';

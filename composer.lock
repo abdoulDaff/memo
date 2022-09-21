@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "49d0eed73c35e5e17c8c427170a67feb",
+    "content-hash": "345260876b0991497c55a61bb89b3273",
     "packages": [
         {
             "name": "brick/math",
@@ -5496,6 +5496,62 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "wsudo/sqlite-php-pdo",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Wsudo/SqlitePhpPdo.git",
+                "reference": "43bba555716b6014c37c0b1078247c1591f7e58c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Wsudo/SqlitePhpPdo/zipball/43bba555716b6014c37c0b1078247c1591f7e58c",
+                "reference": "43bba555716b6014c37c0b1078247c1591f7e58c",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": ">5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wsudo\\SqlitePhpPdo\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-only"
+            ],
+            "authors": [
+                {
+                    "name": "wsudo",
+                    "email": "wsudophp@gmail.com"
+                }
+            ],
+            "description": "With this library you can better manage the SQLITE database in your projects. ",
+            "homepage": "https://docs.madelineproto.xyz",
+            "keywords": [
+                "GB",
+                "SqlitePhpPdo",
+                "database",
+                "db",
+                "file",
+                "generator",
+                "orm",
+                "pdo",
+                "php",
+                "sqlite",
+                "sqlite3",
+                "wsudo"
+            ],
+            "support": {
+                "issues": "https://github.com/Wsudo/SqlitePhpPdo/issues",
+                "source": "https://github.com/Wsudo/SqlitePhpPdo/tree/v1.1.1"
+            },
+            "time": "2021-10-21T20:13:09+00:00"
         }
     ],
     "packages-dev": [

@@ -9,7 +9,7 @@ import { ref } from 'vue';
  
 dayjs.extend(relativeTime);
 
-defineProps(['chirp']);
+// defineProps(['chirp']);
 const props = defineProps(['chirp']);
  
 const form = useForm({
@@ -28,7 +28,7 @@ const editing = ref(false);
             <div class="flex justify-between items-center">
                 <div>
                     <span class="text-gray-800">{{ chirp.user.name }}</span>
-                    <small class="ml-2 text-sm text-gray-600">{{ new Date(chirp.created_at).toLocaleString() }}</small>
+                    <!-- <small class="ml-2 text-sm text-gray-600">{{ new Date(chirp.created_at).toLocaleString() }}</small> -->
                     <small class="ml-2 text-sm text-gray-600">{{ dayjs(chirp.created_at).fromNow() }}</small>
                     <small v-if="chirp.created_at !== chirp.updated_at" class="text-sm text-gray-600"> &middot; edited</small>
                
@@ -49,7 +49,7 @@ const editing = ref(false);
                 </Dropdown>
 
             </div>
-            <p class="mt-4 text-lg text-gray-900">{{ chirp.message }}</p>
+            <!-- <p class="mt-4 text-lg text-gray-900">{{ chirp.message }}</p> -->
             <form v-if="editing" @submit.prevent="form.put(route('chirps.update', chirp.id), { onSuccess: editing = false })">
                 <textarea v-model="form.message" class="mt-4 w-full text-gray-900 border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm"></textarea>
                 <InputError :message="form.errors.message" class="mt-2" />

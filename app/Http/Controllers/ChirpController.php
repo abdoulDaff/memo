@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Chirp;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 

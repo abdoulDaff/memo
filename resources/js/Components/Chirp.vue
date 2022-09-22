@@ -1,4 +1,9 @@
 <script setup>
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+ 
+dayjs.extend(relativeTime);
+
 defineProps(['chirp']);
 </script>
  
@@ -12,6 +17,8 @@ defineProps(['chirp']);
                 <div>
                     <span class="text-gray-800">{{ chirp.user.name }}</span>
                     <small class="ml-2 text-sm text-gray-600">{{ new Date(chirp.created_at).toLocaleString() }}</small>
+                    <small class="ml-2 text-sm text-gray-600">{{ dayjs(chirp.created_at).fromNow() }}</small>
+               
                 </div>
             </div>
             <p class="mt-4 text-lg text-gray-900">{{ chirp.message }}</p>
